@@ -1,6 +1,6 @@
 let runningTotal = 0;
-let buffer = "0";
-let previousOperator;
+let buffer = "0"; //what's indicated on the screen
+let previousOperator; //what was clicked
 const screen = document.querySelector(".screen");
 
 function buttonClick(value) {
@@ -79,14 +79,6 @@ function handleSymbol(symbol) {
       buffer = runningTotal;
       break;
 
-    case "ln":
-      console.log("RunningTotal is : ", runningTotal);
-      runningTotal = Math.log(buffer);
-
-      console.log("Buffer is : ", buffer);
-      buffer = runningTotal;
-      break;
-
     case "X²":
       console.log("RunningTotal is : ", runningTotal);
       runningTotal = Math.pow(buffer, 2);
@@ -102,15 +94,28 @@ function handleSymbol(symbol) {
       buffer = runningTotal;
       break;
 
-    case "π":
+    case "π": //should be handled as a number and not symbol
       console.log("RunningTotal is : ", runningTotal);
       runningTotal = 3.14159265359;
 
       console.log("Buffer is : ", buffer);
       buffer = runningTotal;
       break;
-    case ".":
+
+    case "(":
+      console.log("RunningTotal is : ", runningTotal);
+      runningTotal = "(";
+      console.log("Buffer is : ", buffer);
+      buffer = runningTotal;
+      break;
+    case ")":
+      console.log("RunningTotal is : ", runningTotal);
+      runningTotal = ")";
+      console.log("Buffer is : ", buffer);
+      buffer = runningTotal;
+      break;
     case "+":
+    case ",":
     case "-":
     case "*":
     case "/":
@@ -132,6 +137,7 @@ function handleMath(symbol) {
     "Handling Math operation, the current runningTotal is : ",
     runningTotal
   );
+
   if (runningTotal === 0) {
     runningTotal = intBuffer;
   } else {
