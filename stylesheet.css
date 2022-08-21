@@ -60,7 +60,7 @@ footer {
   color: #385170;
 }
 
-@media (max-width: 50em;) {
+@media (max-width: 50em) {
   .wrapper {
     display: grid;
     grid-template-rows: 1fr 2fr;
