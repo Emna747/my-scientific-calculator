@@ -73,22 +73,12 @@ function handleSymbol(symbol) {
       buffer = runningTotal;
       break;
 
-    case "π": //should be handled as a number and not symbol
-      runningTotal = 3.14159265359;
+    case "π":
+      runningTotal = Math.PI;
 
-      buffer = runningTotal;
+      buffer = +runningTotal;
       break;
 
-    case "(":
-      runningTotal = "(";
-
-      buffer = runningTotal;
-      break;
-    case ")":
-      runningTotal = ")";
-
-      buffer = runningTotal;
-      break;
     case "+":
     case ",":
     case "-":

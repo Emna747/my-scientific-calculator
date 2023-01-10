@@ -45,11 +45,17 @@ button:hover {
   background-color: #f8da5b;
 }
 
+#remaindersign {
+  display: grid;
+  grid-column: 4 / 6;
+  align-items: center;
+}
 #equalsign {
   background-color: #9fd3c7;
   color: black;
   display: grid;
-  grid-column: 4 / 6;
+  grid-column: 3 / 6;
+  align-items: center;
 }
 #equalsign:hover {
   background-color: #f8da5b;
@@ -57,7 +63,7 @@ button:hover {
 footer {
   text-align: center;
   margin-top: 3rem;
-  color: #385170;
+  color: rgb(235, 86, 33);
 }
 
 @media (max-width: 50em) {
